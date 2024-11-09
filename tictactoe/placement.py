@@ -11,13 +11,13 @@ je fais rentrer au joueur les coordonnées de l emplacement et je le stock
 dans une variables element
 
 """
-def verif_case(table, symbol, L):
+def verif_case(table, symbol):
         row     = int(input("rentrez la ligne : "))
         column  = int(input("rentrez la colonne : "))
         element = table[row][column]
 
         if symbol == "X" or symbol == "x" or symbol == "O" or symbol == "o":
-                if element == "":
+                if element == " ":
                         table[row][column] = symbol
                         # table.insert(element, symbol)
                         print(table)
@@ -34,5 +34,3 @@ def toto(L):
         for x in L:
                 for ele in x:
                         verif_case(create_grid, symbol)
-
-#vérifier le merge

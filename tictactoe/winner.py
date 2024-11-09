@@ -27,7 +27,7 @@ board[0][1] == "O" and board[1][1] == "O" and board[2][1] == "O":
         return true, print("victoire4")
 
     elif board[0][2] == "X" and board[1][2] == "X" and board[2][2] == "X" or \
-player[0][2] == "O" and player[1][2] == "O" and player[2][2] == "O":
+board[0][2] == "O" and board[1][2] == "O" and board[2][2] == "O":
         return true, print("victoire5")
     
     else:
@@ -48,10 +48,6 @@ board[0][2] == "O" and board[1][1] == "O" and board[2][0] == "O":
 
 #verification match nul
 def match_nul(horizontal, verticale, diagonale):
-    if horizontal(horizontal) == False and verticale(verticale) == False and \
-diagonale(diagonale) == False:
+    if horizontal == False and verticale == False and \
+diagonale == False:
         return print("match nul")
-    else:
-        print("nul")
-
-
