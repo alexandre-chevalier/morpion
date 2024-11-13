@@ -12,25 +12,38 @@ dans une variables element
 
 """
 def verif_case(table, symbol):
-        row     = int(input("rentrez la ligne : "))
-        column  = int(input("rentrez la colonne : "))
-        element = table[row][column]
 
-        if symbol == "X" or symbol == "x" or symbol == "O" or symbol == "o":
+
+                row     = int(input("rentrez la ligne : "))
+                column  = int(input("rentrez la colonne : "))
+                element = table[row][column]
+                
+
                 if element == " ":
-                        table[row][column] = symbol
+                        symbol1 = symbol[0]
+                        print(symbol1)
+                        table[row][column] = symbol1
                         # table.insert(element, symbol)
                         print(table)
                         print("Au joueur suivant de jouer.")
-                        return table
+                        print(symbol)
+                        if symbol1 =="X":
+                                symbol1 = "O"
+                                print(symbol1)
+                        elif symbol1 == "O":
+                                symbol1 = "X"
+                                print(symbol1)
+                        return verif_case(table, symbol), table
                 else:
                         print("Veuillez choisir une autre case : ")
                         return verif_case(table, symbol)
-        else:
-                print("Veuillez choisir entre l")
+
+
+
+        
 
                         
 def toto(L):
         for x in L:
                 for ele in x:
-                        verif_case(create_grid, symbol)
+                        verif_case(create_grid)

@@ -3,16 +3,21 @@ from grid import *
 from placement import *
 from winner import *
 
-symbol = input("Veuillez rentrer le signe : ")
+
+
 L  = [
         [" ", " ", " "],
         [" ", " ", " "],
         [" ", " ", " "]
         ]
 
+player1 =  input("Entrez le nom de player1 : ")
+player2 = input("Entrez le nom de player2 : ")
+
 def main():
-    initialiser_joueurs()
-    verif_case(L, symbol)
+    initialiser_joueurs(player1,player2)
+    #choisir_symboles()
+    verif_case(L,choisir_symboles())    
     create_grid(L)
     horizontal(L)
     verticale(L)
