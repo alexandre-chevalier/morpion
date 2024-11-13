@@ -12,31 +12,37 @@ dans une variables element
 
 """
 def verif_case(table, symbol):
+        row     = int(input("rentrez la ligne : "))
+        column  = int(input("rentrez la colonne : "))
+        element = table[row][column]
+        symbol1 = " "
 
 
-                row     = int(input("rentrez la ligne : "))
-                column  = int(input("rentrez la colonne : "))
-                element = table[row][column]
+        if element == " ":
+                if symbol1 == "X":
+                        symbol1 = "O"
+                        print("saloperie ",symbol1)
+                elif symbol1 == "O":
+                        symbol1 = "X"
+                        print("enfoire", symbol1)
+                else:
+                        symbol1 = "X"
+                        print("lalalalala", symbol1)
+
+                table[row][column] = symbol1
+                # table.insert(element, symbol)
+                print(table)
+                print("Au joueur suivant de jouer.")
+                print(symbol1)                       
+                return verif_case(table, symbol)                                
+
+        else:
+                print("Veuillez choisir une autre case : ")
+                return verif_case(table, symbol)
+
                 
 
-                if element == " ":
-                        symbol1 = symbol[0]
-                        print(symbol1)
-                        table[row][column] = symbol1
-                        # table.insert(element, symbol)
-                        print(table)
-                        print("Au joueur suivant de jouer.")
-                        print(symbol)
-                        if symbol1 =="X":
-                                symbol1 = "O"
-                                print(symbol1)
-                        elif symbol1 == "O":
-                                symbol1 = "X"
-                                print(symbol1)
-                        return verif_case(table, symbol), table
-                else:
-                        print("Veuillez choisir une autre case : ")
-                        return verif_case(table, symbol)
+                        
 
 
 
