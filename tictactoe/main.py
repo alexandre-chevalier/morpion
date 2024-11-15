@@ -17,7 +17,8 @@ player2 = input("Entrez le nom de player2 : ")
 def main():
     initialiser_joueurs(player1,player2)
     #choisir_symboles()
-    verif_case(L,choisir_symboles())    
+   
+    verif_case(L, symbol(choisir_symboles()))    
     create_grid(L)
     horizontal(L)
     verticale(L)
