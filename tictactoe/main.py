@@ -19,10 +19,9 @@ def main():
     #choisir_symboles()
    
     verif_case(L, symbol(choisir_symboles()))    
-    create_grid(L)
     horizontal(L)
     verticale(L)
     diagonale(L)
-    match_nul(horizontal, verticale, diagonale)
+    match_nul(horizontal(L), verticale(L), diagonale(L))
 
 main()
